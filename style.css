@@ -18,9 +18,10 @@ h1{
     
 }
 h2{
-    font-family: "Wanted Signature", cursive;                                  
-    font-size: 3em;
-    filter: drop-shadow( 0 0 7px rgba(194, 125, 255, 0.7));
+    font-family: 'London', sans-serif;                                                                                                                                                                                                               
+    font-size: 2em;
+    filter: drop-shadow( 0 0 1px rgba(194, 125, 255, 0.7));
+    text-shadow: 0 0 5px rgba(194, 125, 255, 0.7);
     color: rgba(255, 242, 222, 0.926);
 }
 #subtitulo{
@@ -30,6 +31,30 @@ h2{
     filter: drop-shadow( 0 0 27px rgba(194, 125, 255, 0.7));
     text-shadow: 0 0 7px rgba(194, 125, 255, 0.7);
     color: rgba(255, 242, 222, 0.926);
+}
+#bio{
+    margin: 3%;
+    text-align: center !important;
+    line-height: 1.6;
+    color: rgba(254, 242, 227, 0.82);
+}
+#bio-tittle{
+    display: flex;
+    margin: 1%;
+    font-size: 2em;
+    padding-bottom: 1%;
+    filter: drop-shadow( 0 0 7px rgba(0, 0, 0, 0.7));
+    color: rgba(255, 242, 222, 0.926);
+    font-family: 'London', sans-serif;
+                                                                                   
+}
+#bio-icon{
+    margin-left: auto;
+    padding-top: 2%;
+    margin-bottom: -3% !important;
+}
+#bio-tittle:hover{
+    filter: drop-shadow( 0 0 7px rgba(194, 125, 255, 0.7));
 }
 #fondo{
     width: 90vw;
@@ -104,6 +129,11 @@ input{
     border-radius: 1vw;
     padding: 1%;
     font-family: Arial, Helvetica, sans-serif !important;
+}
+input:focus, textarea:focus{
+    border: 1px solid rgba(194, 125, 255) !important;
+    outline: none;
+    filter: drop-shadow( 0 0 10px rgba(194, 125, 255, 0.7));
 }
 .form{
     display: grid;
@@ -206,7 +236,7 @@ footer {
     background-color: #202020cf ;
     border-radius: 1vw;
     width: 42vw;
-    margin-top: 0vw;
+    margin-top: -2%;
 }
 .autor-header{
     cursor: pointer;
@@ -220,31 +250,7 @@ footer {
     width: 42vw;
     font-family:Verdana, Geneva, Tahoma, sans-serif
 }
-#bio{
-    margin: 3%;
-    text-align: center !important;
-    line-height: 1.6;
-    color: rgba(254, 242, 227, 0.82);
-}
-#bio-tittle{
-    display: flex;
-    margin: 1%;
-    font-family: "Sedgwick Ave", cursive;
-    font-size: 3em;
-    padding-bottom: 1%;
-    /* filter: drop-shadow( 0 0 7px rgba(194, 125, 255, 0.7)); */
-    filter: drop-shadow( 0 0 7px rgba(0, 0, 0, 0.7));
-    color: rgba(255, 242, 222, 0.926);
-    font-family: "Wanted Signature", cursive; 
-}
-#bio-icon{
-    margin-left: auto;
-    padding-top: 2%;
-    margin-bottom: -3% !important;
-}
-#bio-tittle:hover{
-    filter: drop-shadow( 0 0 7px rgba(194, 125, 255, 0.7));
-}
+
 
 
 @media screen and (max-width: 800px){
@@ -253,7 +259,7 @@ footer {
         margin-top: 1%;
     }
     h2 {
-        font-size: 3em;
+        font-size: 1.5em;
         margin-top: 1%;
     }
     #subtitulo {
@@ -280,7 +286,8 @@ footer {
         margin-top: 10%;
     }
     .galeria h2{
-        margin: 0;
+        margin: 4%;
+        padding-top: 3%;
     }
     .main-image {
         width: 290px;
@@ -303,7 +310,7 @@ footer {
         margin: 0 auto;
     }
     .form-tittle{
-        margin: 2% 0 -1% -1%;
+        margin: 3% 0 1% -1%;
     }
     
     input, textarea {
@@ -325,8 +332,12 @@ footer {
         margin-bottom: -4%;
     }
     #bio-tittle{
-        font-size: 3em;
-        margin: 1% 1% 10% 1%;
+        font-size: 1.5em;
+        margin: 2% 1% 10% 1%;
+        padding-top: 3%;
+    }
+    #Layer_1{
+        margin-top: -100% !important;
     }
     .autor-section{
         margin-top: 37%;
@@ -341,7 +352,7 @@ footer {
     }
     .formBts{
         display: flex;
-        /* justify-items: space-between; */
+        margin-top: 10%;
     }
 }
 
