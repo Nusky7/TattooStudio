@@ -18,7 +18,8 @@ h1{
     
 }
 h2{
-    font-family: 'London', sans-serif;                                                                                                                                                                                                               
+    font-family: 'London', sans-serif;
+                                                                                                                                                                                                                                                                                                                           
     font-size: 2em;
     filter: drop-shadow( 0 0 1px rgba(194, 125, 255, 0.7));
     text-shadow: 0 0 5px rgba(194, 125, 255, 0.7);
@@ -310,7 +311,7 @@ footer {
         margin: 0 auto;
     }
     .form-tittle{
-        margin: 3% 0 1% -1%;
+        margin: 3% 0 3% -1%;
     }
     
     input, textarea {
@@ -343,7 +344,7 @@ footer {
         margin-top: 37%;
     }
     .autor-section, .autor-content {
-        width: 98vw;
+        width: 100vw;
     }
     .foto-autor{
         width: 60vw;
@@ -352,7 +353,7 @@ footer {
     }
     .formBts{
         display: flex;
-        margin-top: 10%;
+        margin-top: 3%;
     }
 }
 
