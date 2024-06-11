@@ -31,7 +31,7 @@ h2{
     margin-top: -5.5%;
     filter: drop-shadow( 0 0 27px rgba(194, 125, 255, 0.7));
     text-shadow: 0 0 7px rgba(194, 125, 255, 0.7);
-    color: rgba(255, 242, 222, 0.926);
+    color: rgba(252, 245, 234, 0.926);
 }
 #bio{
     margin: 3%;
@@ -42,21 +42,27 @@ h2{
 #bio-tittle{
     display: flex;
     margin: 1%;
+    margin-top: 3%;
     font-size: 2em;
     padding-bottom: 1%;
     filter: drop-shadow( 0 0 7px rgba(0, 0, 0, 0.7));
-    color: rgba(255, 242, 222, 0.926);
-    font-family: 'London', sans-serif;
-                                                                                   
+    color: rgba(252, 245, 234, 0.926);
+    font-family: 'London', sans-serif;                                                                  
 }
 #bio-icon{
     margin-left: auto;
-    padding-top: 2%;
+    padding-top: 1%;
     margin-bottom: -3% !important;
 }
 #bio-tittle:hover{
     filter: drop-shadow( 0 0 7px rgba(194, 125, 255, 0.7));
+    text-shadow: 0 0 7px rgba(194, 125, 255, 0.7);
 }
+.autor-header:focus #bio-tittle{
+    filter: drop-shadow( 0 0 7px rgba(194, 125, 255, 0.7));
+    text-shadow: 0 0 7px rgba(194, 125, 255, 0.7);
+}
+
 #fondo{
     width: 90vw;
     height: auto;
@@ -108,8 +114,10 @@ h2{
 .thumbnails img:hover {
     transform: scale(1.1);
 }
-.thumbnails img.active {
-    border: 2px solid #fff;
+.thumbnails img.selected{
+    border: 1px solid rgba(194, 125, 255, 0.7);
+    transform: scale(1.1);
+    box-shadow: 0 0 7px rgba(194, 125, 255, 0.7);
 }
 
 .nav-button-L, .nav-button-R{
@@ -118,16 +126,14 @@ h2{
     background: none;
     margin: 2% 0 1% 0;
     cursor: pointer;
-    filter: drop-shadow( 0 0 7px rgba(194, 125, 255, 0.7));
-    
 }
-.nav-button-L:focus{
-    transform: rotateX('15deg');
+.nav-button-L:active, .nav-button-R:active{
+    filter: drop-shadow( 0 0 7px rgba(194, 125, 255));
 }
 input{
-    margin: 0 25% 1% 25%;
+    margin: 0 30% 1% 30%;
     text-align: center;
-    border-radius: 1vw;
+    border-radius: 6px;
     padding: 1%;
     font-family: Arial, Helvetica, sans-serif !important;
 }
@@ -142,8 +148,8 @@ input:focus, textarea:focus{
 }
 #msg{
     height: 15vh;
-    margin: 0 15% 1% 15%;
-    border-radius: 1vw;
+    margin: 0 20% 1% 20%;
+    border-radius: 6px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -240,16 +246,61 @@ footer {
     margin-top: -2%;
 }
 .autor-header{
+    width: 100%;
     cursor: pointer;
     background-color: #333333;
     padding: 0.1px 20px 0 3%;
+    border: none;
     border-radius: 10px;
 }
+.autor-header:hover{
+    filter: drop-shadow( 0 0 7px rgba(194, 125, 255, 0.7));
+    border: 1px solid rgba(194, 125, 255, 0.7);
+}
+
 .autor-content{
     display: none;
     text-align: center;
     width: 42vw;
     font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+
+#chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color:  rgba(152, 77, 217, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+#chat-button:hover {
+    background-color:  rgba(194, 125, 255, 0.7);
+    filter: drop-shadow( 0 0 10px rgba(194, 125, 255, 0.7));
+}
+#chat-button-mobile {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    background-color:  rgba(194, 125, 255, 0.7);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 
@@ -280,7 +331,7 @@ footer {
     }
     #fondo {
         width: 100vw;
-        margin-top: -37%;
+        margin-top: -32%;
         margin-left: 2%;
     }
     .galeria{
@@ -294,9 +345,10 @@ footer {
         width: 290px;
         height: 430px;
         display: flex;
-        justify-content: center;
+        justify-content: center !important;
         margin-bottom: 3%;
     }
+  
     .nav-button-L, .nav-button-R{
         width: 15vw;
         height: 8vh !important;
@@ -341,7 +393,7 @@ footer {
         margin-top: -100% !important;
     }
     .autor-section{
-        margin-top: 37%;
+        margin-top: 42%;
     }
     .autor-section, .autor-content {
         width: 100vw;
@@ -354,6 +406,17 @@ footer {
     .formBts{
         display: flex;
         margin-top: 3%;
+    }
+    #chat-button {
+        display: none; 
+    }
+    
+    #chat-button-mobile {
+        display: block; 
+        margin-bottom: 3%;
+    }
+    #chat-button-mobile:hover{
+        filter: drop-shadow( 0 0 10px rgba(194, 125, 255, 0.7));
     }
 }
 

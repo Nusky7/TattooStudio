@@ -5,14 +5,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const leftButton = document.querySelector('.nav-button-L');
     const rightButton = document.querySelector('.nav-button-R');
     let thisIndex = 0;
+    
 
     thumbnails[0].style.opacity = opacity;
 
     thumbnails.forEach(img => img.addEventListener('click', (e) => {
         // Resetear la opacidad de cada miniatura
+        
         thumbnails.forEach(img => (img.style.opacity = 0.5));
+        thumbnails.forEach(img => (img.classList.remove('selected')));
+        
         // Cambiar la imagen actual a la imagen clicada
         current.src = e.target.src;
+        e.target.classList.add('selected');
 
         current.classList.add('fade-in');
         setTimeout(() => current.classList.remove('fade-in'), 500);
@@ -62,26 +67,36 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
     function toggleAutor() {
-        var content = document.getElementById("autor-content");
+        let content = document.getElementById("autor-content");
         if (content.style.display === "none" || content.style.display === "") {
             content.style.display = "block";
-        } else {
+        } 
+        else {
             content.style.display = "none";
-        }
+        } 
     }
 
     document.getElementById('whatsappForm').addEventListener('submit', function(event) {
         event.preventDefault(); 
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var msg = document.getElementById('msg').value;
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let msg = document.getElementById('msg').value;
         
-        var message = `Nombre: ${name}\nContacto: ${email}\nConsulta: ${msg}`;
+        let message = `Nombre: ${name}\nContacto: ${email}\nConsulta: ${msg}`;
         // Codifica el mensaje para la URL de whatsapp
-        var encodedMessage = encodeURIComponent(message);
-        var phoneNumber = '+34675260296';
+        let encodedMessage = encodeURIComponent(message);
+        let phoneNumber = '+34601262765';
         
-        var whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
         window.open(whatsappURL, '_blank');
     });
+
+    function openChat() {
+        let left= window.innerWidth;
+
+        window.open("https://my.inkup.io/Miguel-Angel-Marco-", "Chat", "width=400,height=600,resizable=yes, left="+left);
+    }
+    
+
+    
 
