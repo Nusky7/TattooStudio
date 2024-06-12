@@ -124,7 +124,7 @@ h2{
     border-radius: 100px;
     border: none;
     background: none;
-    margin: 2% 0 1% 0;
+    margin: 4% 0 1% 0;
     cursor: pointer;
 }
 .nav-button-L:active, .nav-button-R:active{
