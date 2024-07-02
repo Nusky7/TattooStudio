@@ -5,13 +5,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const rightButton = document.querySelector('.nav-button-R');
     let thisIndex = 0;
 
-    thumbnails.forEach(img => img.addEventListener('click', handleThumbnailClick));
+    thumbnails.forEach(img => { 
+        img.style.opacity = 0.6;
+        img.addEventListener('click', handleThumbnailClick)});
     leftButton.addEventListener('click', handleLeftButtonClick);
     rightButton.addEventListener('click', handleRightButtonClick);
 
     function handleThumbnailClick(e) {
         thumbnails.forEach(img => {
-            img.style.opacity = 0.5;
+            img.style.opacity = 0.6;
             img.classList.remove('selected');
         });
 
