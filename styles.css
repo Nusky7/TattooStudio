@@ -6,8 +6,9 @@ html, body {
 } 
 .swiper-slide{
     max-height: auto !important;
-    scale: 0.77;
+    scale: 0.7;
     border-radius: 20px
+    margin-top: 0 !important;
 }
 .swiper-slide img{
     border-radius: 20px !important;
@@ -57,7 +58,7 @@ h2{
 
 @media screen and (max-width: 712px){
     h1{
-        font-size: 4rem !important;
+        font-size: 3.5rem !important;
     }
     #subtitulo{
         font-size: 5rem !important;
